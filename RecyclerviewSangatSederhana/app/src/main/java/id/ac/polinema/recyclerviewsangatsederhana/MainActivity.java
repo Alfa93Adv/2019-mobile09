@@ -13,31 +13,24 @@ import id.ac.polinema.recyclerviewsangatsederhana.adapters.SuperHeroAdapter;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView rvSuperHero;
-    //instansiasi list superhero
     List<SuperHero> listSuperHero = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //menyambungkan rvSuperHero ke layout
         rvSuperHero = findViewById(R.id.rvSuperHero);
-        //Membuat object hero
-        SuperHero hero = new SuperHero("Petruk");
-        //menambahkan hero ke listSuperHero
-        listSuperHero.add(hero);
-        //membuat object hero baru
-        hero = new SuperHero("Gareng");
-        //menambahkan hero baru ke listSuperhero
-        listSuperHero.add(hero);
-//        for (int i = 0 ; i<=50 ; i++){
-//            hero = new SuperHero("Gareng");
-//            //menambahkan hero baru ke listSuperhero
-//            listSuperHero.add(hero);
-//        }
-        //Instansiasi Adapter
+
+        SuperHero hero1 = new SuperHero("1. ", R.drawable.adidas);
+        listSuperHero.add(hero1);
+
+        SuperHero hero2 = new SuperHero("2. ", R.drawable.nike);
+        listSuperHero.add(hero2);
+
+        SuperHero hero3 = new SuperHero("3. ", R.drawable.vans);
+        listSuperHero.add(hero3);
+
         SuperHeroAdapter superHeroAdapter = new SuperHeroAdapter(listSuperHero);
-        //set adapter dan layoutmanager
         rvSuperHero.setAdapter(superHeroAdapter);
         rvSuperHero.setLayoutManager(new LinearLayoutManager(this));
     }
