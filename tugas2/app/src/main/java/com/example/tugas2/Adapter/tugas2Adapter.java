@@ -1,4 +1,4 @@
-package com.example.tugas1.Adapter;
+package com.example.tugas2.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,33 +10,32 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tugas1.Model.tugas1;
-import com.example.tugas1.R;
+import com.example.tugas2.Model.tugas2;
+import com.example.tugas2.R;
 
 import java.util.List;
 
-public class tugas1Adapter extends RecyclerView.Adapter<tugas1Adapter.MyViewHolder> {
-    List<tugas1> listsepatu;
+public class tugas2Adapter extends RecyclerView.Adapter<tugas2Adapter.MyViewHolder> {
+    List<tugas2> listsepatu;
 
-    public tugas1Adapter(List<tugas1> listsepatu){
+    public tugas2Adapter(List<tugas2> listsepatu){
         this.listsepatu= listsepatu;
     }
 
 
-
     @NonNull
     @Override
-    public tugas1Adapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public tugas2Adapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         View itemMobilView = layoutInflater.inflate(R.layout.sepatu,parent,false);
-        tugas1Adapter.MyViewHolder viewHolder = new tugas1Adapter.MyViewHolder(itemMobilView);
+        tugas2Adapter.MyViewHolder viewHolder = new tugas2Adapter.MyViewHolder(itemMobilView);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull tugas1Adapter.MyViewHolder holder, int position) {
-        tugas1 sepatu = listsepatu.get(position);
+    public void onBindViewHolder(@NonNull tugas2Adapter.MyViewHolder holder, int position) {
+        tugas2 sepatu = listsepatu.get(position);
         holder.nama.setText(sepatu.getSepatu());
         holder.gambar.setImageResource(sepatu.getUrut());
     }

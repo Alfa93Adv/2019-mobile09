@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView rvSepatu;
 
-    List<tugas1> tugas1 = new ArrayList<>();
+    List<com.example.tugas1.Model.tugas1> tugas1 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
